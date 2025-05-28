@@ -1,0 +1,80 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.8rem 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--primary-color);
+}
+
+.todo-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.todo-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    color: #B8B8B8;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.todo-button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.delete-button {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.save-button {
+    background-color: var(--success-color);
+    color: var(--text-color);
+}
+
+.todo-input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-right: 0.8rem;
+    transition: border-color 0.3s ease;
+}
+
+.todo-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.2);
+}

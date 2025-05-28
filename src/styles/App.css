@@ -1,0 +1,70 @@
+.app-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--bg-gradient-1), var(--bg-gradient-2));
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stats-container span {
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(255, 105, 180, 0.15);
+}
+
+/* Add these global styles at the bottom */
+:root {
+    --primary-color: #FF69B4;    /* Hot Pink */
+    --secondary-color: #87CEEB;   /* Sky Blue */
+    --danger-color: #FF6B6B;      /* Coral Red */
+    --success-color: #98FB98;     /* Pale Green */
+    --text-color: #4A4A4A;        /* Dark Gray */
+    --bg-gradient-1: #FFE5F1;     /* Light Pink */
+    --bg-gradient-2: #E0F4FF;     /* Light Blue */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
