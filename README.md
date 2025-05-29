@@ -67,3 +67,6 @@ To test the application, you can manually interact with the UI to ensure that al
 - Verifying that tasks persist after refreshing the page
 
 Feel free to explore the code in the `src` directory for a deeper understanding of the implementation.
+
+![image](https://github.com/user-attachments/assets/74b6182a-f368-4353-9c43-ffbe7da685a5)
+
