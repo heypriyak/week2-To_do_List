@@ -7,6 +7,7 @@ interface AddTodoProps {
 
 const AddTodo: React.FC<AddTodoProps> = ({ addTask }) => {
     const [text, setText] = useState('');
+    const [priority, setPriority] = useState<'low' | 'medium' | 'high'>('medium');
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -14,23 +15,35 @@ const AddTodo: React.FC<AddTodoProps> = ({ addTask }) => {
             const newTask: Task = {
                 id: Date.now(),
                 text: text.trim(),
-                completed: false
+                completed: false,
+                dateAdded: new Date(),
+                priority
             };
             addTask(newTask);
             setText('');
+            setPriority('medium');
         }
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="add-todo-form">
             <input
                 type="text"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Add a new task"
-                required
+                className="todo-input"
             />
-            <button type="submit">Add</button>
+            <select
+                value={priority}
+                onChange={(e) => setPriority(e.target.value as 'low' | 'medium' | 'high')}
+                className="priority-select"
+            >
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit" className="add-button">Add</button>
         </form>
     );
 };
